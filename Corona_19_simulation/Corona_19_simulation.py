@@ -8,7 +8,7 @@ hwak_list = [] # 확진자
 hwak_dt = [] # 확진 일자
 day = 1 #날짜 "첫날 날짜"
 
-N = 10 #처음 사람수
+N = 200 #처음 사람수
 n = 1 #확진자 수
 p = 0.2 #확진자와 접촉 후 감염 확률 {0.1 = 10%}
 nMin = 1 #하루 접촉자 수
@@ -63,6 +63,7 @@ for i in range(n): # n = 최초 감염자
         continue
     tur[rnum].color("red") #만약 확진자 list에 확진자1명이 증가 안하면 반복 해서 빨강 
     print("1일차 감염자 : ", rnum)
+    hwak_list.append(rnum) # 추가할 코드
     hwak_dt.append(1)#첫날
 
 # 확진자 리스트를 날 별로 복사해서 반복문 실행 
@@ -129,4 +130,5 @@ input()
 
 
 
+ 
  

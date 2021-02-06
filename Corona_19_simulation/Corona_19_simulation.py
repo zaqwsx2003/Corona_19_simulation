@@ -8,7 +8,7 @@ hwak_list = [] # 확진자
 hwak_dt = [] # 확진 일자
 day = 1 #날짜 "첫날 날짜"
 
-N = 200 #처음 사람수
+N = 20 #처음 사람수
 n = 1 #확진자 수
 p = 0.2 #확진자와 접촉 후 감염 확률 {0.1 = 10%}
 nMin = 1 #하루 접촉자 수
@@ -73,11 +73,14 @@ print("hwak_list:", hwak_list) #전체 확진자 리스트
 
 while True:
     for i in day_hwak_list:
+        print("----------------")
         print("확진자 : ", i )
+        print("----------------")
         idx = i
         m = random.randrange(nMin, nMax+1)
+        print("----------------")
         print("접촉자 : ", m, "명")
-
+        print("----------------")
         # 확진자 기준 거리 계산, 리스트 생성
         ds_list = []
         ds_list.clear()
@@ -122,13 +125,13 @@ while True:
         break
 
 #최종 확진자의 리스트 출력
+print("----------------")
 print(hwak_list) 
 print(hwak_dt)
-
+print("----------------")
 #좌표 창 유지를 위해 작성
 input()
 
 
 
- 
  
